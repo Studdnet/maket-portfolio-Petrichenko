@@ -37,7 +37,14 @@
 	padding-left: 10px;
 	position: relative;
 	z-index: 2;
-	@include before_circle; 
+	@include before_circle;
+}
+
+.divider {
+	width: 60px;
+	height: 3px;
+	background-color: $main-color;
+	margin-top: 25px;
 }
 
 @import "blocks/promo";
