@@ -1,0 +1,96 @@
+.skills {
+	padding-top: 120px;
+
+	&__title {
+		position: relative;
+		text-align: center;
+		@include before_circle;
+
+		&:before {
+			top: -5px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__subtitle {
+		text-align: center;
+	}
+
+	&__grid {
+		margin-top: 60px;
+		display: grid;
+		grid-template: repeat(auto-fit, minmax(270px, auto)) / repeat(4, minmax(270px, auto));
+		grid-auto-rows: minmax(270px, auto);
+		gap: 13px;
+	}
+
+	&__item {
+		padding: 30px 30px 25px 30px;
+		border: 1px solid $black;
+
+		&-icon {
+			// width: 46px;
+			height: 65px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		&-title {
+			margin-top: 20px;
+		}
+
+		&-text {
+			margin-top: 15px;
+			font-size: 12px;
+			line-height: 18px;
+			color: $black;
+		}
+	}
+
+	&__percentages {
+		margin-top: 120px;
+		display: grid;
+		grid-template: repeat(auto-fit, minmax(70px, auto)) / repeat(3, minmax(350px, auto));
+		grid-auto-rows: minmax(70px, auto);
+		column-gap: 45px;
+		row-gap: 30px;
+	}
+
+	.percentages {
+		&__body {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			&-title {
+				padding-left: 14px;
+				position: relative;
+				@include before_circle;
+			}
+
+			&-points {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 21px;
+				color: $black;
+			}
+		}
+
+		&__box {
+			margin-top: 27px;
+			width: 350px;
+			height: 14px;
+			background: #E8E4DE;
+			border-radius: 4px;
+
+			&-yellow {
+				height: 100%;
+				background: $main-color;
+				border-radius: 4px;
+			}
+		}
+	}
+}
