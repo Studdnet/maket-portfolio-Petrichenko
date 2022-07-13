@@ -11,6 +11,7 @@
 
 	.about {
 		padding-top: 80px;
+
 		&__wrapper {
 			grid-template-columns: 400px 525px;
 			column-gap: 30px;
@@ -18,7 +19,7 @@
 		}
 
 		&__skills {
-			grid-template: repeat(2,minmax(55px,115px))/repeat(2,220px);
+			grid-template: repeat(2, minmax(55px, 115px))/repeat(2, 220px);
 			column-gap: 45px;
 			row-gap: 20px;
 
@@ -32,6 +33,16 @@
 			}
 		}
 	}
+
+	.resume {
+		padding-top: 80px;
+
+		&__wrapper {
+			padding: 50px 0px 0px 0px;
+			column-gap: initial;
+			justify-content: space-between;
+		}
+	}
 }
 
 @media (max-width: 992px) {
@@ -41,20 +52,32 @@
 
 	.about {
 		padding-top: 60px;
+
 		&__wrapper {
 			grid-template-columns: 335px 355px;
 		}
 
 		&__skills {
-			grid-template: repeat(2,minmax(90px,auto))/ minmax(220px,auto);
+			grid-template: repeat(2, minmax(90px, auto))/ minmax(220px, auto);
+
 			&-item {
 				grid-template-columns: 40px auto;
 			}
 		}
 	}
+
 	.title {
 		&_fz36 {
 			font-size: 29px;
+		}
+	}
+
+	.resume {
+		padding-top: 60px;
+
+		&__wrapper {
+			grid-template-columns: repeat(2, auto);
+			column-gap: 20px;
 		}
 	}
 
@@ -73,6 +96,7 @@
 
 	.promo {
 		overflow: hidden;
+
 		&__title {
 			line-height: 39px;
 			width: 300px;
@@ -92,6 +116,14 @@
 			row-gap: 0px;
 		}
 
+	}
+
+	.resume {
+		padding-top: 40px;
+
+		.divider {
+			margin: 10px auto 0 auto;
+		}
 	}
 
 }
@@ -121,9 +153,11 @@
 
 	.promo {
 		background: url('../img/main_bg.jpg') no-repeat 57%/cover;
+
 		&__btns {
 			margin-top: 32px;
 		}
+
 		&__title {
 			width: 265px;
 		}
@@ -131,16 +165,26 @@
 
 	.about {
 		padding-top: 40px;
+
 		&__wrapper {
 			grid-template: 240px auto / minmax(300px, auto);
 		}
+
 		&__skills {
 			row-gap: 15px;
 		}
 	}
+
 	.title {
-		&_fz36{
+		&_fz36 {
 			font-size: 25px;
+		}
+	}
+
+	.resume {
+		padding: 40px 10px 0 10px;
+		&__wrapper {
+			grid-template-columns: auto;
 		}
 	}
 }
