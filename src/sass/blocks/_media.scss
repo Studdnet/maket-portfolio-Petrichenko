@@ -81,6 +81,12 @@
 			}
 		}
 	}
+	.price {
+		padding-top: 80px;
+		&__container {
+			max-width: 940px;
+		}
+	}
 }
 
 @media (max-width: 992px) {
@@ -180,6 +186,14 @@
 		}
 	}
 
+	.price {
+		&__wrapper {
+			margin-top: 40px;
+			grid-template: repeat(3,minmax(45px,auto))/repeat(auto-fit,minmax(320px,auto));
+			column-gap: 20px;
+		}
+	}
+
 }
 
 @media (max-width: 768px) {
@@ -228,6 +242,13 @@
 	.skills {
 		&__percentages {
 			grid-template: repeat(auto-fit,minmax(70px,auto))/repeat(auto-fit,minmax(250px,1fr));
+		}
+	}
+	
+	.price {
+		&__wrapper {
+			grid-template: repeat(3,minmax(45px,auto))/repeat(auto-fit,minmax(250px,100%));
+
 		}
 	}
 
