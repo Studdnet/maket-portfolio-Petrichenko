@@ -215,16 +215,31 @@
 
 	.contacts {
 		&__wrapper {
-			grid-template-columns: 300px auto;
-			column-gap: 10px;
+			grid-template-columns: 320px auto;
+			column-gap: 20px;
 		}
 
 		&__form {
-			grid-template: 45px 45px 150px/repeat(auto-fit, minmax(200px, 100%));
+			grid-template: 45px 45px 200px / repeat(auto-fit, minmax(100%, auto));
+			grid-auto-rows: 45px;
+		}
+
+		&__input {
+			grid-column: 1;
+		}
+
+		&__btn {
+			width: 180px;
+			padding: 0px;
+			font-size: 14px;
 		}
 
 		&__textarea {
 			grid-column: 1;
+		}
+
+		&__triggers {
+			column-gap: 15px;
 		}
 	}
 }
@@ -288,12 +303,19 @@
 	.contacts {
 		padding-top: 80px;
 		padding-bottom: 40px;
+
 		&__wrapper {
 			grid-template-columns: minmax(250px, 100%);
 		}
 
 		&__photo {
 			display: none;
+		}
+
+		&__btn {
+			width: 210px;
+			padding: 0px;
+			font-size: 14px;
 		}
 	}
 }
@@ -384,6 +406,7 @@
 
 	.portfolio {
 		padding-top: 40px;
+
 		&__wrapper {
 			grid-template: repeat(2, 280px)/repeat(auto-fill, 280px);
 		}
@@ -395,5 +418,21 @@
 
 	.contacts {
 		padding-top: 40px;
+		padding-bottom: 80px;
+		&__triggers {
+			grid-template-columns: 1fr;
+			row-gap: 20px;
+		}
+
+		&__btn {
+			margin: 0 auto;
+		}
+
+		&__policy {
+			grid-row: 1;
+			display: flex;
+			margin: 0 auto;
+			align-items: center;
+		}
 	}
 }
