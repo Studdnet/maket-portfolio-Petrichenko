@@ -1,0 +1,24 @@
+#progressButton {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	height: 70px;
+	width: 70px;
+	display: none;
+	place-items: center;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	z-index: 10;
+}
+
+#progressButton__value {
+	height: calc(100% - 13px);
+	width: calc(100% - 13px);
+	background-color: #FFFFFF;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	font-size: 33px;
+	color: #4A4A4A;
+}

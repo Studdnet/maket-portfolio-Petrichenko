@@ -2,8 +2,8 @@
 
 const burger = document.querySelector('.burger'),
 	menu = document.querySelector('.menu'),
-	closeElem = document.querySelector('.menu__close'),
-	menuLink = document.querySelectorAll('.menu__link');
+	closeElem = document.querySelector('.menu__close');
+
 
 
 burger.addEventListener('click', () => {
@@ -14,19 +14,25 @@ closeElem.addEventListener('click', () => {
 	menu.classList.remove('active');
 });
 
-menuLink.forEach((j) => {
-	menuLink[j].addEventListener('click', () => {
-		menu.classList.remove('active');
-	});
-});
 
-menuLink.addEventListener('click', () => {
-	menu.classList.remove('active');
-});
+let calcScrollValue = () => {
+   let scrollProgress = document.getElementById('progressButton');
+   let progressValue = document.getElementById('progressButton__value'); 
+   let pos = document.documentElement.scrollTop; 
+   let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+   let scrollValue = Math.round((pos * 100) / calcHeight);
 
-const points = document.querySelectorAll('.percentages__body-points'),
-	lines = document.querySelectorAll('.percentages__box-yellow');
+   if (pos > 400) {
+      scrollProgress.style.display = 'grid'; 
+   } else {
+      scrollProgress.style.display = 'none'; 
+   }
 
-points.forEach((item, i) => {
-	lines[i].style.width = item.innerHTML;
-});
+   scrollProgress.addEventListener("click", () => {
+      document.documentElement.scrollTop = 0; 
+   });
+   scrollProgress.style.background = `conic-gradient(#ffa501 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+};
+
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
