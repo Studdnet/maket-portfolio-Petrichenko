@@ -5,6 +5,7 @@ const burger = document.querySelector('.burger'),
 	closeElem = document.querySelector('.menu__close');
 
 
+// Боковое меню 
 
 burger.addEventListener('click', () => {
 	menu.classList.add('active');
@@ -16,6 +17,8 @@ closeElem.addEventListener('click', () => {
 	document.body.classList.remove('_lock');
 });
 
+
+// Кнопка для возвращения в начало страницы
 
 let calcScrollValue = () => {
 	let scrollProgress = document.getElementById('progressButton');
@@ -39,7 +42,9 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
+
 // Прокрутка при клике 
+
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
 let menuItems = document.querySelectorAll('.menu__item[data-goto]');
@@ -47,24 +52,24 @@ if (menuItems.length > 0) {
 	menuItems.forEach(menuItem => {
 		menuItem.addEventListener("click", onMenuItemClick);
 	});
+}
 
-	function onMenuItemClick(e) {
-		const menuItem = e.target;
-		if (menuItem.dataset.goto && document.querySelector(menuItem.dataset.goto)) {
-			const gotoBlock = document.querySelector(menuItem.dataset.goto);
-			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset + 100;
+function onMenuItemClick(e) {
+	const menuItem = e.target;
+	if (menuItem.dataset.goto && document.querySelector(menuItem.dataset.goto)) {
+		const gotoBlock = document.querySelector(menuItem.dataset.goto);
+		const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset + 100;
 
-			if (menu.classList.contains('active')) {
-				document.body.classList.remove('_lock');
-				menu.classList.remove('active');
-				
-			}
-
-			window.scrollTo({
-				top: gotoBlockValue,
-				behavior: "smooth"
-			});
-			e.preventDefault();
+		if (menu.classList.contains('active')) {
+			document.body.classList.remove('_lock');
+			menu.classList.remove('active');
+			
 		}
+
+		window.scrollTo({
+			top: gotoBlockValue,
+			behavior: "smooth"
+		});
+		e.preventDefault();
 	}
 }
