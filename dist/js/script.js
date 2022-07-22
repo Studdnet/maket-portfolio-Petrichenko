@@ -73,6 +73,7 @@ function onMenuItemClick(e) {
 	}
 }
 
+// Валидация формы
 
 // $(document).ready(function () {
 
