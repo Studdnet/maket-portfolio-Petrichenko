@@ -63,13 +63,44 @@ function onMenuItemClick(e) {
 		if (menu.classList.contains('active')) {
 			document.body.classList.remove('_lock');
 			menu.classList.remove('active');
-			
+
 		}
 
 		window.scrollTo({
-			top: gotoBlockValue,
-			behavior: "smooth"
+			top: gotoBlockValue
 		});
 		e.preventDefault();
 	}
 }
+
+
+// $(document).ready(function () {
+
+// 	function validateForms(form) {
+// 		$(form).validate({
+// 			rules: {
+// 				name: {
+// 					required: true,
+// 					minlength: 2
+// 				},
+// 				email: {
+// 					required: true,
+// 					email: true
+// 				}
+// 			},
+// 			messages: {
+// 				name: {
+// 					required: "Введите свое имя",
+// 					minlength: jQuery.validator.format("Минимальное кол-во символов: {0}")
+// 				},
+// 				email: {
+// 					required: "Нам нужен ваш email для обратной связи",
+// 					email: "Ваш email должен соответствовать формату: name@domain.com"
+// 				}
+// 			}
+// 		});
+// 	}
+
+// 	validateForms('#contacts__form');
+
+// });
